@@ -18,6 +18,17 @@ key.set("v", "<leader>e", "$")
 key.set("n", "<leader>a", "0")
 key.set("v", "<leader>a", "0")
 
+-- disable avante's keymaps
+key.del("n", "<leader>ad")
+key.del("n", "<leader>af")
+key.del("n", "<leader>ah")
+key.del("n", "<leader>aR")
+key.del("n", "<leader>as")
+key.del("n", "<leader>at")
+
+-- set <leader>ua to avante
+key.set("n", "<leader>ua", ":AvanteAsk<CR>")
+
 -- 窗口切换
 key.set("n", "<leader>h", "<C-w>h")
 key.set("n", "<leader>j", "<C-w>j")

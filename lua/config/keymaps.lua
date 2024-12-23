@@ -63,29 +63,8 @@ key.set("v", "<C-l>", "8l")
 
 -- tab
 key.set("n", "tu", ":tabnew<cr>")
-key.set("n", "J", ":tabprevious<cr>")
-key.set("n", "K", ":tabnext<cr>")
-
--- togglewrap
-function ToggleWrap()
-  if vim.opt.wrap:get() then
-    vim.opt.wrap = false
-  else
-    vim.opt.wrap = true
-  end
-end
-
-key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
-
-function ToggleSpell()
-  if vim.opt.spell:get() then
-    vim.opt.spell = false
-  else
-    vim.opt.spell = true
-  end
-end
-
-key.set("n", "<leader>sp", [[:lua ToggleSpell()<CR>]])
+key.set("n", "<leader>J", ":tabprevious<cr>")
+key.set("n", "<leader>K", ":tabnext<cr>")
 
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://fish<CR>")

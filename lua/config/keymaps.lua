@@ -51,10 +51,6 @@ key.set("v", "K", ":m '<-2<CR>gv=gv")
 -- exit v mode
 key.set("v", "io", "<ESC>")
 
--- add split
-key.set("n", "<leader>sl", "<C-w>v")
-key.set("n", "<leader>sh", "<C-w>s")
-
 -- better J K
 key.set("n", "<C-j>", "5j")
 key.set("n", "<C-k>", "5k")

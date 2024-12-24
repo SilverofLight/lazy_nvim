@@ -8,9 +8,9 @@ key.set("i", "<C-e>", "<Esc>A")
 key.set("i", "<C-a>", "<Esc>I")
 key.set("i", "<C-q>", "<++>")
 
-key.set("n", "<leader>o", "/<++><CR>:nohl<CR>c4l")
-key.set("n", "<leader>i", "?<++><CR>:nohl<CR>c4l")
-key.set("n", "<leader>nh", ":nohl<CR>")
+key.set("n", "<leader>o", "/<++><CR><cmd>nohl<CR>c4l")
+key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l")
+key.set("n", "<leader>nh", "<cmd>nohl<CR>")
 
 -- easy way to go the the end of a line
 key.set("n", "<leader>e", "$")
@@ -27,7 +27,7 @@ key.del("n", "<leader>as")
 key.del("n", "<leader>at")
 
 -- set <leader>ua to avante
-key.set("n", "<leader>ua", ":AvanteAsk<CR>")
+key.set("n", "<leader>ua", "<cmd>AvanteAsk<CR>")
 
 -- 窗口切换
 key.set("n", "<leader>h", "<C-w>h")
@@ -39,14 +39,14 @@ key.set("n", "<leader>l", "<C-w>l")
 key.set("n", ";", ":")
 
 -- window resize
-key.set("n", "<up>", ":res +2<CR>")
-key.set("n", "<down>", ":res -2<CR>")
-key.set("n", "<left>", ":vertical resize -2<CR>")
-key.set("n", "<right>", ":vertical resize +2<CR>")
+key.set("n", "<up>", "<cmd>res +2<CR>")
+key.set("n", "<down>", "<cmd>res -2<CR>")
+key.set("n", "<left>", "<cmd>vertical resize -2<CR>")
+key.set("n", "<right>", "<cmd>vertical resize +2<CR>")
 
 -- move lines
-key.set("v", "J", ":m '>+1<CR>gv=gv")
-key.set("v", "K", ":m '<-2<CR>gv=gv")
+key.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
+key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 
 -- exit v mode
 key.set("v", "io", "<ESC>")
@@ -62,10 +62,9 @@ key.set("v", "<C-h>", "8h")
 key.set("v", "<C-l>", "8l")
 
 -- tab
-key.set("n", "tu", ":tabnew<cr>")
-key.set("n", "<leader>J", ":tabprevious<cr>")
-key.set("n", "<leader>K", ":tabnext<cr>")
+key.set("n", "tu", "<cmd>tabnew<cr>")
+key.set("n", "J", "<cmd>tabprevious<cr>")
 
 -- terminal
-key.set("n", "<leader>gt", ":vsplit term://fish<CR>")
+key.set("n", "<leader>gt", "<cmd>vsplit term://fish<CR>")
 key.set("t", "<C-s>", "<C-\\><C-n>")

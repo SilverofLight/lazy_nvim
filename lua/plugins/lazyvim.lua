@@ -7,4 +7,12 @@ return {
       keys[#keys + 1] = { "K", "<cmd>tabnext<cr>" }
     end,
   },
+  {
+    "saghen/blink.cmp",
+    opts = {
+      keymap = {
+        preset = "super-tab",
+      },
+    },
+  },
 }

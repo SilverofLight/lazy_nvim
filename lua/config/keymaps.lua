@@ -65,6 +65,8 @@ key.set("v", "<C-l>", "8l")
 key.set("n", "tu", "<cmd>tabnew<cr>")
 key.set("n", "J", "<cmd>tabprevious<cr>")
 
+key.set("v", "io", "<esc>")
+
 -- terminal
 key.set("n", "<leader>gt", "<cmd>vsplit term://fish<CR>")
 key.set("t", "<C-s>", "<C-\\><C-n>")

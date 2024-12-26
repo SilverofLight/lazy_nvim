@@ -8,15 +8,15 @@ key.set("i", "<C-e>", "<Esc>A")
 key.set("i", "<C-a>", "<Esc>I")
 key.set("i", "<C-q>", "<++>")
 
-key.set("n", "<leader>o", "/<++><CR><cmd>nohl<CR>c4l")
-key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l")
-key.set("n", "<leader>nh", "<cmd>nohl<CR>")
+key.set("n", "<leader>o", "/<++><CR><cmd>nohl<CR>c4l", { desc = "Next placeholder" })
+key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l", { desc = "Previous placeholder" })
+key.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "No highlight" })
 
 -- easy way to go the the end of a line
-key.set("n", "<leader>e", "$")
-key.set("v", "<leader>e", "$")
-key.set("n", "<leader>a", "0")
-key.set("v", "<leader>a", "0")
+key.set("n", "<leader>e", "$", { desc = "End of line" })
+key.set("v", "<leader>e", "$", { desc = "End of line" })
+key.set("n", "<leader>a", "0", { desc = "Start of line" })
+key.set("v", "<leader>a", "0", { desc = "Start of line" })
 
 -- disable avante's keymaps
 key.del("n", "<leader>ad")
@@ -27,13 +27,13 @@ key.del("n", "<leader>as")
 key.del("n", "<leader>at")
 
 -- set <leader>ua to avante
-key.set("n", "<leader>ua", "<cmd>AvanteAsk<CR>")
+key.set("n", "<leader>ua", "<cmd>AvanteAsk<CR>", { desc = "Avante ask" })
 
 -- 窗口切换
-key.set("n", "<leader>h", "<C-w>h")
-key.set("n", "<leader>j", "<C-w>j")
-key.set("n", "<leader>k", "<C-w>k")
-key.set("n", "<leader>l", "<C-w>l")
+key.set("n", "<leader>h", "<C-w>h", { desc = "Move to left window" })
+key.set("n", "<leader>j", "<C-w>j", { desc = "Move to down window" })
+key.set("n", "<leader>k", "<C-w>k", { desc = "Move to up window" })
+key.set("n", "<leader>l", "<C-w>l", { desc = "Move to right window" })
 
 -- ; to :
 key.set("n", ";", ":")
@@ -43,10 +43,6 @@ key.set("n", "<up>", "<cmd>res +2<CR>")
 key.set("n", "<down>", "<cmd>res -2<CR>")
 key.set("n", "<left>", "<cmd>vertical resize -2<CR>")
 key.set("n", "<right>", "<cmd>vertical resize +2<CR>")
-
--- move lines
-key.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
-key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 
 -- exit v mode
 key.set("v", "io", "<ESC>")
@@ -62,8 +58,8 @@ key.set("v", "<C-h>", "8h")
 key.set("v", "<C-l>", "8l")
 
 -- tab
-key.set("n", "tu", "<cmd>tabnew<cr>")
-key.set("n", "J", "<cmd>tabprevious<cr>")
+key.set("n", "tu", "<cmd>tabnew<cr>", { desc = "New tab" })
+key.set("n", "J", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
 
 key.set("v", "io", "<esc>")
 

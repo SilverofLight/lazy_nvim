@@ -4,7 +4,7 @@ return {
     opts = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       -- disable K map
-      keys[#keys + 1] = { "K", "<cmd>tabnext<cr>" }
+      keys[#keys + 1] = { "K", "<cmd>tabnext<cr>", { dscr = "Next tab" } }
     end,
   },
   {
